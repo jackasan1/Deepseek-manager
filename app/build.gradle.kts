@@ -1,8 +1,8 @@
-import org.jetbrains.kotlin.gradle.dsl.JvmTarget
-
+// AGP 9.0+ has built-in Kotlin support, so org.jetbrains.kotlin.android is
+// intentionally NOT applied here. The Compose compiler plugin still is,
+// because it is a Kotlin *compiler* plugin that layers on top of built-in Kotlin.
 plugins {
     alias(libs.plugins.android.application)
-    alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
 }
 
@@ -39,12 +39,6 @@ android {
 
     buildFeatures {
         compose = true
-    }
-}
-
-kotlin {
-    compilerOptions {
-        jvmTarget.set(JvmTarget.JVM_17)
     }
 }
 

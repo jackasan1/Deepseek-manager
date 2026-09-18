@@ -1,9 +1,9 @@
 [versions]
 agp = "9.4.1"
 kotlin = "2.4.20"
-compileSdk = "36"
+compileSdk = "37"
 minSdk = "26"
-targetSdk = "36"
+targetSdk = "37"
 # NOTE: Material 3 Expressive has no stable release yet.
 # 1.5.0-alpha28 requires the Compose 1.13.0-alpha01 line, so the
 # compose-bom CANNOT be used (it pins ui 1.12.1 / material3 1.4.0).
@@ -33,5 +33,4 @@ okhttp = { module = "com.squareup.okhttp3:okhttp", version.ref = "okhttp" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
